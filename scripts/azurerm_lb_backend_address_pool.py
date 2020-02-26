@@ -47,7 +47,8 @@ def azurerm_lb_backend_address_pool(crf,cde,crg,headers,requests,sub,json,az2tfm
                 fr=open(rfilename, 'w')
                 fr.write(az2tfmess)
 
-                fr.write('resource ' + tfp + ' ' + rg + '__' +lbname+'__'+ rname + ' {\n')
+#                fr.write('resource "' + tfp + '" "' + rg + '__' +lbname+'__'+ rname + '" {\n')
+                fr.write('resource "' + tfp + '" "' + rname + '" {\n')
                 fr.write('\t name = "' + name + '"\n')
                 fr.write('\t resource_group_name = "'+ rgs + '"\n')
 
